@@ -11,8 +11,23 @@ acionaBotao.addEventListener('click', function() {
         //alterar para alert
         console.warn("O campo de valor está vazio. Por favor, insira um número.");
         return;
-    }else {
-        console.log("Valor digitado:", valorDigitado);
+    }else if (valorDigitado >= 3){
+        //inserir mensagem no html
+        document.querySelector('#mensagem').textContent = `O tempo limite para permanência é de 120 minutos`;
+        document.querySelector('#troco').textContent = `Seu troco é de R$ ${(valorDigitado - 3).toFixed(2)}`;
         //limpar o campo de input
         inputValor.value = "";
+    }else if (valorDigitado < 3 && valorDigitado >= 1.75){
+        //inserir mensagem no html
+        document.querySelector('#mensagem').textContent = `O tempo limite para permanência é de 60 minutos`;
+        document.querySelector('#troco').textContent = `Seu troco é de R$ ${(valorDigitado - 1.75).toFixed(2)}`;
+        //limpar o campo de input
+        inputValor.value = "";
+    } else if (valorDigitado < 1.75 && valorDigitado >= 1){
+        //inserir mensagem no html
+        document.querySelector('#mensagem').textContent = `O tempo limite para permanência é de 30 minutos`;
+        document.querySelector('#troco').textContent = `Seu troco é de R$ ${(valorDigitado - 1).toFixed(2)}`;
+        //limpar o campo de input
+        inputValor.value = "";
+
     }});
