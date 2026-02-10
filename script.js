@@ -9,7 +9,7 @@ acionaBotao.addEventListener('click', function() {
     // Verificar se o valor é um número válido
     if (valorDigitado <= 0 ) {
         //alterar para alert
-        console.warn("O campo de valor está vazio. Por favor, insira um número.");
+        document.querySelector('#mensagem').textContent = `O valor digitado é inválido. Por favor, insira um valor positivo.`;
         return;
     }else if (valorDigitado >= 3){
         //inserir mensagem no html
