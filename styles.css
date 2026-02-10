@@ -1,0 +1,73 @@
+/* css reset - boa prática */
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;/*Garante que o body ocupe no minimo 100% da altura do viewport*/
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    #valor {
+    /*margin: 10px;*/
+    margin: 0 auto; /* centraliza horizontalmente */
+    height: auto;
+    width: 150px;
+    text-align: center;
+    border-radius: 4px;
+    }
+
+    #calcularTempo {
+    margin: 5px 10px 10px 10px;
+    margin: 0 auto; /* centraliza horizontalmente */
+    height: auto;
+    width: 250px;
+    /*transition: background 0.5s; /* Efeito suave na troca de cor */
+    background-color: #3a3c46;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    }
+    
+    #calcularTempo:hover {
+        background-color: #1880d5;
+        transition: 1000ms;
+    }
+
+}
+
+
+/*footer*/
+footer {
+    color:#0b0715;
+    text-align: center;
+    background-color: #838285;
+    margin-top: auto; /*Empurra o footer para o final do viewport*/
+}
+
+footer a {
+    text-decoration: none;
+    color: #22053d;
+}
+
+footer a:hover {
+    text-decoration:  underline;
+}
